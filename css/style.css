@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
 }
 
 .container{
@@ -19,9 +20,11 @@
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     user-select: none;
     transition: bottom 0.4s;
+    display: block;
 }
 .keyboard--hidden{
     bottom: -100%;
+    display: none;
 }
 .keyboard__keys{
     text-align: center;
@@ -77,9 +80,13 @@
 .content{
     width: 100%;
     height: 100vh;
+}
+.areaTexto{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 50px;
 }
 .content textarea{
     width: 80%; 
@@ -87,3 +94,46 @@
     max-height: 200px;
     padding: 10px;
 }
+.conteudo{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding-top: 70px;
+}
+.conteudo ul{
+    width: 50%;
+}
+.conteudo span{
+    width: 50%;
+    padding: 20px;
+    color: #004134;
+}
+ul{
+    list-style-image: url('../images/right-arrow.png');
+}
+.titleDiv{
+    width: 100%;
+    text-align: center;
+}
+@media (max-width: 600px){
+    .areaTexto{
+        align-items: flex-start;
+        margin-top: 100px;
+    }
+    .content textarea{
+        width: 100%;
+        height: 100px;
+        max-height: 100px;
+    }
+    .conteudo{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .conteudo ul, .conteudo span{
+        width: 100%;
+    }
+    
+    
+}
+

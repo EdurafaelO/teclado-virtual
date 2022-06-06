@@ -146,6 +146,11 @@ const Keyboard = {
     },
 
     close(){
+        Swal.fire(
+            'Sucesso!',
+            'Mensagem digitada: "'+this.properties.value+'"',
+            'success'
+        )
         this.properties.value = "";
         this.eventHandlers.oninput = oninput;
         this.eventHandlers.onclose = onclose;
